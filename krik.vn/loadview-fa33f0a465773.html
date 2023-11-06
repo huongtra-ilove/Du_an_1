@@ -1,0 +1,55 @@
+<input type="hidden" id="totalCartItems_hidden" value="0">
+<p class="title">Giỏ hàng</p>
+<span class="textCartSide">Bạn đang có <b>0</b> sản phẩm trong giỏ hàng. </span>
+<div class="cart-view clearfix">
+  <table id="clone-item-cart" class="table-clone-cart">
+    <tr class="item_2 hidden">
+      <td class="img">
+        <a href="" title="">
+          <img src="" alt="cart" />
+        </a>
+      </td>
+      <td>
+        <a class="pro-title-view" href="" title=""></a>
+        <span class="pro-price-view"></span>
+        <span class="variant"></span>
+        <span class="pro-quantity-view"></span>
+        <span class="remove_link remove-cart"></span>
+      </td>
+    </tr>
+  </table>
+  <table id="cart-view">
+    <tr>
+      <td>Hiện chưa có sản phẩm</td>
+    </tr>
+  </table>
+  <span class="line"></span>
+  <table class="table-total">
+    <tr></tr>
+    <tr>
+      <td class="text-left">
+        <b>TỔNG TIỀN TẠM TÍNH:</b>
+      </td>
+      <td class="text-right" id="total-view-cart"> 0₫</td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <a href="/cart/checkout" class="checkLimitCart linktocheckout button dark">Tiến hành đặt hàng</a>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <a href="/cart" class="linktocart button dark">Xem chi tiết giỏ hàng <i class="fa fa-arrow-right"></i>
+        </a>
+      </td>
+    </tr>
+  </table>
+</div>
+<script>
+  var $storeId = $('#storeId').val();
+  var totalCartItems_hidden = document.getElementById('totalCartItems_hidden').value;
+  $('.icon-cart .count').html(totalCartItems_hidden);
+  if (in_array($storeId, [100699, 3138])) {
+    $('.cart-header .count-cart').html(totalCartItems_hidden);
+  }
+</script>

@@ -1,0 +1,70 @@
+<div class="phistor-icon">
+    <i class="fa fa-angle-double-left"></i>
+  </div>
+  <div class="phistory-title">Đã xem</div>
+  <div class="phistory-content">
+    <div class="phis-v-box">
+      <div class="phistor-v-slider">
+        <div class="phistory-v-item">
+          <a href="/ao-blazer-ke-caro-fitted-5504-p37884532.html" title="Áo Blazer Kẻ Caro Fitted 5504">
+            <img src="https://pos.nvncdn.net/be3159-662/ps/20231027_Ve8yXXG2Ot.jpeg" alt="Áo Blazer Kẻ Caro Fitted 5504" />
+          </a>
+        </div>
+      </div>
+      <div class="phistor-v-nav">
+        <div class="prevSlideZ">
+          <i class="fa fa-chevron-up"></i>
+        </div>
+        <div class="nextSlideZ">
+          <i class="fa fa-chevron-down"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    var $storeId = $('#storeId').val();
+    var pHisVer = $('.phistor-v-slider');
+    if (pHisVer.length) {
+      pHisVer.carouFredSel({
+        items: 3,
+        direction: "up",
+        scroll: {
+          items: 1,
+          duration: 700
+        },
+        auto: false,
+        prev: ".phistor-v-nav .prevSlideZ",
+        next: ".phistor-v-nav .nextSlideZ"
+      });
+    }
+    $('.phistor-icon').click(function() {
+      var productHistory = $('#phistory-bar .phistory-content');
+      productHistory.empty();
+      if (!$(this).hasClass('is-open')) {
+        ajaxLoadView({
+          view: 'pHistorySidebar',
+          params: '&view=horizontal',
+          delay: 150,
+          onSuccess: function(rs) {
+            productHistory.html(rs)
+          }
+        });
+      } else {
+        ajaxLoadView({
+          view: 'pHistorySidebar',
+          params: '&view=vertical',
+          delay: 150,
+          onSuccess: function(rs) {
+            productHistory.html(rs)
+          }
+        });
+      }
+      $(this).toggleClass('is-open');
+      $('#phistory-bar').toggleClass('is-active')
+    });
+    if (in_array($storeId, [113339])) {
+      $('.closeBox').click(function() {
+        $('#phistory-bar').addClass('hidden');
+      });
+    }
+  </script>

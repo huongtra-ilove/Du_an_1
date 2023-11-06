@@ -1,0 +1,48 @@
+<ul class="sub-menu-2">
+    <li class="item-menu-2">
+      <a href="/ao-blazer-pc564635.html"> Áo Blazer </a>
+    </li>
+    <li class="item-menu-2">
+      <a href="/ao-phong-pc6379.html"> Áo Phông </a>
+    </li>
+    <li class="item-menu-2">
+      <a href="javascript:void(0)"> Áo Sơ Mi <i class="fa fa-plus" aria-hidden="true"></i>
+      </a>
+      <div class="itemSubMenu itemSubMenu3">
+        <div class="sub-category-block">
+          <ul class="item-sub-category">
+            <li class="viewall">
+              <a href="/ao-so-mi-pc76944.html"> Xem tất cả Áo Sơ Mi </a>
+            </li>
+            <li class="title-sub-category">
+              <a href="/so-mi-coc-tay-pc565515.html"> Sơ Mi Cộc Tay </a>
+            </li>
+            <li class="title-sub-category">
+              <a href="/so-mi-dai-tay-pc565516.html"> Sơ Mi Dài Tay </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </li>
+    <li class="item-menu-2">
+      <a href="/ao-polo-pc490701.html"> Áo Polo </a>
+    </li>
+    <li class="item-menu-2">
+      <a href="/ao-khoac-pc501565.html"> Áo Khoác </a>
+    </li>
+    <li class="item-menu-2">
+      <a href="/ao-ni-pc501566.html"> Áo Nỉ </a>
+    </li>
+    <li class="item-menu-2">
+      <a href="/ao-hoodie-pc501567.html"> Áo Hoodie </a>
+    </li>
+  </ul>
+  <script>
+    $('.item-menu-2 a').click(function() {
+      $('.itemSubMenu3').removeClass('active');
+      $(this).parent().find('.itemSubMenu3').addClass('active');
+      $('.item-menu-2 a').removeClass('active');
+      $(this).addClass('active');
+      // $(this).find('i').toggleClass('fa-plus').toggleClass('fa-minus');
+    })
+  </script>
